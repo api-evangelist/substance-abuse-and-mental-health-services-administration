@@ -28,17 +28,10 @@ created: '2024-12-03'
 modified: '2026-03-16'
 position: Consuming
 description: >-
-  The Substance Abuse and Mental Health Services Administration (SAMHSA) is a
-  branch of the U.S. Department of Health and Human Services dedicated to
-  improving the quality and availability of prevention, treatment, and recovery
-  support services for individuals struggling with substance abuse and mental
-  health disorders. SAMHSA works to increase awareness and understanding of the
-  issues surrounding mental health and substance abuse, provide resources and
-  support to those in need, and promote policies and programs that address the
-  unique challenges faced by individuals dealing with these conditions. Through
-  grants, research, training, and outreach programs, SAMHSA aims to reduce the
-  impact of mental illness and addiction on individuals, families, and
-  communities across the nation.
+  The Substance Abuse and Mental Health Services Administration (SAMHSA) is a branch
+  of the U.S. Department of Health and Human Services dedicated to improving the quality
+  and availability of prevention, treatment, and recovery support services for individuals
+  struggling with substance abuse and mental health disorders.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
