@@ -5,8 +5,7 @@ apis:
   - aid: >-
       substance-abuse-and-mental-health-services-administration:substance-abuse-and-mental-health-services-administration
     name: Substance Abuse and Mental Health Services Administration
-    tags:
-      - API
+    tags: []
     humanURL: https://www.samhsa.gov
     properties:
       - url: https://www.samhsa.gov
