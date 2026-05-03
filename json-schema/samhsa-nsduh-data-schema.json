@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.samhsa.gov/schemas/nsduh-record",
+  "title": "SAMHSA NSDUH Survey Data Record",
+  "description": "Represents a row from the SAMHSA National Survey on Drug Use and Health (NSDUH) public use data file. Contains anonymized substance use and mental health prevalence data.",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "integer",
+      "description": "Survey year",
+      "minimum": 2002
+    },
+    "stateCode": {
+      "type": "string",
+      "description": "Two-letter state abbreviation",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "ageGroup": {
+      "type": "string",
+      "description": "Age group category",
+      "enum": ["12-17", "18-25", "26 or Older", "18 or Older", "12 or Older"]
+    },
+    "substanceType": {
+      "type": "string",
+      "description": "Substance category",
+      "enum": [
+        "Alcohol",
+        "Tobacco",
+        "Marijuana",
+        "Cocaine",
+        "Heroin",
+        "Methamphetamine",
+        "Prescription Pain Relievers",
+        "Prescription Tranquilizers",
+        "Prescription Stimulants",
+        "Hallucinogens",
+        "Inhalants",
+        "Any Illicit Drug"
+      ]
+    },
+    "measureType": {
+      "type": "string",
+      "description": "Type of usage measure",
+      "enum": [
+        "Past Month Use",
+        "Past Year Use",
+        "Lifetime Use",
+        "Substance Use Disorder",
+        "Needing But Not Receiving Treatment"
+      ]
+    },
+    "percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Prevalence percentage for the measure"
+    },
+    "estimatedCount": {
+      "type": "integer",
+      "description": "Estimated number of individuals in thousands"
+    },
+    "lowerConfidenceInterval": {
+      "type": "number",
+      "description": "Lower bound of 95% confidence interval"
+    },
+    "upperConfidenceInterval": {
+      "type": "number",
+      "description": "Upper bound of 95% confidence interval"
+    },
+    "mentalHealthIndicator": {
+      "type": "string",
+      "description": "Mental health measure if applicable",
+      "enum": [
+        "Any Mental Illness (AMI)",
+        "Serious Mental Illness (SMI)",
+        "Major Depressive Episode (MDE)",
+        "Suicidal Thoughts",
+        "Suicidal Behavior",
+        "Mental Health Treatment"
+      ]
+    }
+  }
+}

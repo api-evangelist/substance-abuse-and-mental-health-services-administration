@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "samhsa": "https://www.samhsa.gov/vocab#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "gov": "https://www.data.gov/vocab#",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "address": "schema:address",
+    "telephone": "schema:telephone",
+    "latitude": "schema:latitude",
+    "longitude": "schema:longitude",
+    "geo": "schema:geo",
+
+    "MedicalOrganization": "schema:MedicalOrganization",
+    "TreatmentFacility": {
+      "@id": "samhsa:TreatmentFacility",
+      "@type": "schema:MedicalOrganization"
+    },
+    "SubstanceAbuseProgram": {
+      "@id": "samhsa:SubstanceAbuseProgram",
+      "@type": "schema:MedicalOrganization"
+    },
+    "MentalHealthProgram": {
+      "@id": "samhsa:MentalHealthProgram",
+      "@type": "schema:MedicalOrganization"
+    },
+
+    "facilityType": {
+      "@id": "samhsa:facilityType"
+    },
+    "serviceCategory": {
+      "@id": "samhsa:serviceCategory"
+    },
+    "treatmentServices": {
+      "@id": "samhsa:treatmentServices"
+    },
+    "paymentOptions": {
+      "@id": "samhsa:paymentOptions"
+    },
+    "acceptsMedicaid": {
+      "@id": "samhsa:acceptsMedicaid",
+      "@type": "schema:Boolean"
+    },
+    "acceptsMedicare": {
+      "@id": "samhsa:acceptsMedicare",
+      "@type": "schema:Boolean"
+    },
+    "offersNoFeeTreatment": {
+      "@id": "samhsa:offersNoFeeTreatment",
+      "@type": "schema:Boolean"
+    },
+    "offersSlidingFee": {
+      "@id": "samhsa:offersSlidingFee",
+      "@type": "schema:Boolean"
+    },
+    "populationsServed": {
+      "@id": "samhsa:populationsServed"
+    },
+
+    "SurveyDataRecord": {
+      "@id": "samhsa:SurveyDataRecord"
+    },
+    "NSDUH": {
+      "@id": "samhsa:NationalSurveyDrugUseHealth"
+    },
+    "substanceType": {
+      "@id": "samhsa:substanceType"
+    },
+    "measureType": {
+      "@id": "samhsa:measureType"
+    },
+    "prevalencePercentage": {
+      "@id": "samhsa:prevalencePercentage",
+      "@type": "schema:Number"
+    },
+    "ageGroup": {
+      "@id": "samhsa:ageGroup"
+    },
+
+    "GovernmentAgency": "schema:GovernmentOrganization",
+    "Dataset": "schema:Dataset",
+    "DataDownload": "schema:DataDownload",
+    "publisher": "schema:publisher",
+    "creator": "schema:creator",
+    "issued": "dcterms:issued",
+    "modified": "dcterms:modified",
+    "license": "dcterms:license",
+    "language": "dcterms:language"
+  }
+}

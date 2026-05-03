@@ -1,0 +1,179 @@
+name: Substance Abuse and Mental Health Services Administration (SAMHSA)
+description: >-
+  Vocabulary of key terms, programs, datasets, and concepts used by SAMHSA. Covers
+  substance use disorders, mental health conditions, treatment modalities, data resources,
+  and public health programs administered by SAMHSA.
+version: "1.0"
+created: "2026-05-02"
+modified: "2026-05-02"
+tags:
+  - Federal Government
+  - Public Health
+  - Behavioral Health
+  - Substance Use
+  - Mental Health
+
+terms:
+  - term: SAMHSA
+    definition: >-
+      The Substance Abuse and Mental Health Services Administration. A branch of the U.S.
+      Department of Health and Human Services (HHS) that leads public health efforts to advance
+      behavioral health in the United States. SAMHSA's mission is to reduce the impact of
+      substance abuse and mental illness on America's communities.
+    category: Agency
+    tags:
+      - Federal Government
+      - Public Health
+
+  - term: NSDUH (National Survey on Drug Use and Health)
+    definition: >-
+      The primary source of annual U.S. data on substance use and mental health. Surveys
+      approximately 70,000 people aged 12 and older each year on drug, alcohol, and tobacco
+      use and mental health conditions. Published by SAMHSA since 1971.
+    category: Dataset
+    tags:
+      - Survey Data
+      - Statistics
+      - Open Data
+
+  - term: Treatment Locator
+    definition: >-
+      SAMHSA's Behavioral Health Treatment Services Locator (findtreatment.gov). A database
+      of over 14,000 substance use disorder and mental health treatment facilities. Searchable
+      by location, payment type, and service. Available via web and API.
+    category: Service
+    tags:
+      - Treatment
+      - API
+      - Facility Locator
+
+  - term: National Helpline (988/1-800-662-4357)
+    definition: >-
+      SAMHSA's free, confidential, 24/7, 365-day-a-year treatment referral and information
+      service for individuals and families facing mental and/or substance use disorders.
+      Also accessible via 988 Suicide & Crisis Lifeline.
+    category: Service
+    tags:
+      - Crisis Services
+      - Helpline
+
+  - term: MAT (Medication-Assisted Treatment)
+    definition: >-
+      The use of FDA-approved medications (buprenorphine, methadone, naltrexone) combined
+      with counseling and behavioral therapies to treat opioid use disorder (OUD) and alcohol
+      use disorder. Considered the gold standard for OUD treatment.
+    category: Treatment Modality
+    tags:
+      - Opioid Use Disorder
+      - Treatment
+
+  - term: SUD (Substance Use Disorder)
+    definition: >-
+      A clinically significant condition involving problematic use of a psychoactive substance
+      causing distress or impairment. Classified by severity (mild, moderate, severe) in the
+      DSM-5. Encompasses alcohol, opioids, stimulants, cannabis, and other substances.
+    category: Clinical Term
+    tags:
+      - Substance Use
+      - Clinical
+
+  - term: OUD (Opioid Use Disorder)
+    definition: >-
+      A problematic pattern of opioid use causing significant impairment or distress. A major
+      public health crisis in the United States addressed through SAMHSA's Opioid Response
+      Network and MAT expansion programs.
+    category: Clinical Term
+    tags:
+      - Opioids
+      - Treatment
+
+  - term: Co-Occurring Disorders
+    definition: >-
+      The presence of both a substance use disorder and a mental health disorder in the same
+      individual. Also called dual diagnosis or comorbid disorders. SAMHSA promotes integrated
+      treatment for co-occurring disorders.
+    category: Clinical Term
+    tags:
+      - Mental Health
+      - Substance Use
+
+  - term: TEDS (Treatment Episode Data Set)
+    definition: >-
+      Annual data compiled from state administrative records on admissions to and discharges
+      from substance abuse treatment facilities. Funded by SAMHSA and published via the
+      Behavioral Health Services Information System (BHSIS).
+    category: Dataset
+    tags:
+      - Treatment Data
+      - Statistics
+
+  - term: Block Grant
+    definition: >-
+      Federal grants distributed to states for substance abuse and mental health services.
+      SAMHSA administers the Substance Abuse Prevention and Treatment (SAPT) Block Grant
+      and the Community Mental Health Services Block Grant.
+    category: Program
+    tags:
+      - Grants
+      - Funding
+
+  - term: 988 Suicide & Crisis Lifeline
+    definition: >-
+      A national network of local crisis centers providing free and confidential emotional
+      support to people in suicidal crisis or mental health distress. Dialed by calling or
+      texting 988. Administered by SAMHSA.
+    category: Service
+    tags:
+      - Crisis Services
+      - Suicide Prevention
+      - Mental Health
+
+  - term: Recovery Support Services
+    definition: >-
+      Non-clinical services that support individuals' recovery from substance use disorders
+      and mental illness. Includes peer support, housing, employment, and transportation
+      assistance. Funded by SAMHSA grants.
+    category: Service Type
+    tags:
+      - Recovery
+      - Community
+
+  - term: Detoxification
+    definition: >-
+      A medically supervised process of managing withdrawal from alcohol, opioids, or other
+      substances. The first step in treatment, but not a complete treatment on its own.
+      Required before other treatment modalities can begin.
+    category: Treatment Modality
+    tags:
+      - Treatment
+      - Clinical
+
+  - term: Behavioral Health
+    definition: >-
+      The connection between behaviors and the health and well-being of the body, mind, and
+      spirit. Encompasses both mental health and substance use disorders. SAMHSA uses this
+      term to describe its scope and mission.
+    category: Concept
+    tags:
+      - Mental Health
+      - Public Health
+
+  - term: Outpatient Treatment
+    definition: >-
+      Treatment that allows patients to live at home while attending scheduled treatment
+      sessions at a clinic or facility. Includes standard outpatient, intensive outpatient
+      (IOP), and partial hospitalization programs (PHP).
+    category: Treatment Setting
+    tags:
+      - Treatment
+      - Settings
+
+  - term: Residential Treatment
+    definition: >-
+      24-hour care in a non-hospital residential setting. Includes therapeutic communities,
+      short-term residential programs, and long-term residential programs. Appropriate for
+      moderate-to-severe SUD.
+    category: Treatment Setting
+    tags:
+      - Treatment
+      - Settings

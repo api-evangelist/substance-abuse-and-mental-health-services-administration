@@ -1,0 +1,61 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://findtreatment.gov/locator/listing?sCity=Austin&sState=TX&sDistance=25&sCatCode=SA&sMedicaid=Y&page=1&pageSize=5",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "description": "Search for Medicaid-accepting substance abuse treatment facilities within 25 miles of Austin, TX"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "totalCount": 47,
+      "page": 1,
+      "pageSize": 5,
+      "searchLocation": {
+        "latitude": 30.2672,
+        "longitude": -97.7431,
+        "address": "Austin, TX"
+      },
+      "facilities": [
+        {
+          "name1": "Austin Recovery",
+          "street1": "8402 Cross Park Dr",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78754",
+          "phone": "(512) 697-0118",
+          "latitude": 30.3667,
+          "longitude": -97.6832,
+          "distMiles": 7.4,
+          "category": "Substance Abuse",
+          "typeDescription": "Residential/Hospital",
+          "services": ["Residential Short-Term Treatment", "Outpatient", "Detoxification"],
+          "medicaid": "Y",
+          "medicare": "N",
+          "slidingFee": "Y",
+          "noFee": "N"
+        },
+        {
+          "name1": "Integral Care",
+          "street1": "1430 Collier Street",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78704",
+          "phone": "(512) 472-4357",
+          "latitude": 30.2522,
+          "longitude": -97.7528,
+          "distMiles": 1.7,
+          "category": "Co-Occurring Disorders",
+          "typeDescription": "Outpatient",
+          "services": ["Outpatient", "Intensive Outpatient Treatment", "Medication-Assisted Treatment"],
+          "medicaid": "Y",
+          "medicare": "Y",
+          "slidingFee": "Y",
+          "noFee": "Y"
+        }
+      ]
+    }
+  }
+}

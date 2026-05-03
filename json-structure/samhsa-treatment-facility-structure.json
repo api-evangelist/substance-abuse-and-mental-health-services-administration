@@ -1,0 +1,88 @@
+{
+  "name": "TreatmentFacility",
+  "description": "A SAMHSA-listed behavioral health treatment facility as returned by the Treatment Services Locator API.",
+  "type": "object",
+  "properties": {
+    "name1": {
+      "type": "string",
+      "description": "Primary facility name",
+      "example": "Community Recovery Center"
+    },
+    "name2": {
+      "type": "string",
+      "description": "Secondary name or DBA"
+    },
+    "street1": {
+      "type": "string",
+      "description": "Street address"
+    },
+    "city": {
+      "type": "string",
+      "description": "City",
+      "example": "Austin"
+    },
+    "state": {
+      "type": "string",
+      "description": "Two-letter state code",
+      "example": "TX"
+    },
+    "zip": {
+      "type": "string",
+      "description": "ZIP code",
+      "example": "78701"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number",
+      "example": "(512) 555-0100"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude for mapping"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude for mapping"
+    },
+    "distMiles": {
+      "type": "number",
+      "description": "Distance from search location in miles"
+    },
+    "category": {
+      "type": "string",
+      "description": "Service category",
+      "enum": ["Substance Abuse", "Mental Health", "Co-Occurring Disorders"]
+    },
+    "typeDescription": {
+      "type": "string",
+      "description": "Facility type",
+      "example": "Outpatient"
+    },
+    "services": {
+      "type": "array",
+      "description": "Services provided",
+      "items": { "type": "string" },
+      "example": ["Detoxification", "Medication-Assisted Treatment", "Counseling"]
+    },
+    "medicaid": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Accepts Medicaid"
+    },
+    "medicare": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Accepts Medicare"
+    },
+    "slidingFee": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Sliding fee scale available"
+    },
+    "noFee": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Free treatment available"
+    }
+  }
+}

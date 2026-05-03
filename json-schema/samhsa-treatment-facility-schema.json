@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.samhsa.gov/schemas/treatment-facility",
+  "title": "SAMHSA Treatment Facility",
+  "description": "Schema for a SAMHSA-licensed behavioral health treatment facility as returned from the Treatment Locator API.",
+  "type": "object",
+  "required": ["name1", "city", "state"],
+  "properties": {
+    "name1": {
+      "type": "string",
+      "description": "Primary facility name"
+    },
+    "name2": {
+      "type": "string",
+      "description": "Secondary name or DBA"
+    },
+    "street1": {
+      "type": "string",
+      "description": "Street address line 1"
+    },
+    "street2": {
+      "type": "string",
+      "description": "Street address line 2"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the facility is located"
+    },
+    "state": {
+      "type": "string",
+      "description": "Two-letter US state abbreviation",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "zip": {
+      "type": "string",
+      "description": "ZIP or ZIP+4 code"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Primary contact phone number"
+    },
+    "websiteUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Facility website URL"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90,
+      "description": "Decimal latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180,
+      "description": "Decimal longitude"
+    },
+    "category": {
+      "type": "string",
+      "description": "Service category",
+      "enum": ["Substance Abuse", "Mental Health", "Co-Occurring Disorders"]
+    },
+    "typeDescription": {
+      "type": "string",
+      "description": "Detailed facility type (e.g., Outpatient, Residential, Hospital Inpatient)"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Treatment services offered (detox, MAT, counseling, etc.)"
+    },
+    "paymentOptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Accepted payment methods and insurance types"
+    },
+    "medicaid": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Whether the facility accepts Medicaid"
+    },
+    "medicare": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Whether the facility accepts Medicare"
+    },
+    "slidingFee": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Whether sliding scale fees are available"
+    },
+    "noFee": {
+      "type": "string",
+      "enum": ["Y", "N"],
+      "description": "Whether free treatment is available"
+    },
+    "populationsServed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Special populations served (veterans, LGBTQ+, adolescents, etc.)"
+    }
+  }
+}
