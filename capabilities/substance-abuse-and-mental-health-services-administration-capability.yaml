@@ -1,0 +1,180 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SAMHSA Behavioral Health Treatment Services Locator API
+  description: The SAMHSA Behavioral Health Treatment Services Locator API provides search access to over 14,000 substance
+    use disorder and mental health treatment facilities across the United States. The API powers findtreatment.gov and allows
+    developers to build treatment locator tools for their communities.
+  tags:
+  - Substance
+  - Abuse
+  - And
+  - Mental
+  - Health
+  - Services
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: substance-abuse-and-mental-health-services-administration
+    baseUri: https://findtreatment.gov/locator/listing
+    description: SAMHSA Behavioral Health Treatment Services Locator API HTTP API.
+    resources:
+    - name: listing
+      path: /listing
+      operations:
+      - name: searchtreatmentfacilities
+        method: GET
+        description: Search Treatment Facilities
+        inputParameters:
+        - name: sAddr
+          in: query
+          type: string
+          description: Street address to search near
+        - name: sCity
+          in: query
+          type: string
+          description: City to search in
+        - name: sState
+          in: query
+          type: string
+          description: Two-letter state abbreviation (e.g., CA, TX)
+        - name: sZip
+          in: query
+          type: string
+          description: ZIP code to search near
+        - name: sDistance
+          in: query
+          type: integer
+          description: Search radius in miles
+        - name: sCatCode
+          in: query
+          type: string
+          description: 'Category code: SA (substance abuse), MH (mental health), CO (co-occurring)'
+        - name: sType
+          in: query
+          type: string
+          description: Facility type code
+        - name: sService
+          in: query
+          type: string
+          description: Service type code (e.g., detox, residential, outpatient)
+        - name: sMedicaid
+          in: query
+          type: string
+          description: Filter for Medicaid-accepting facilities
+        - name: sMedicare
+          in: query
+          type: string
+          description: Filter for Medicare-accepting facilities
+        - name: sSlidingFee
+          in: query
+          type: string
+          description: Filter for sliding-scale fee facilities
+        - name: sNoFee
+          in: query
+          type: string
+          description: Filter for no-cost treatment facilities
+        - name: page
+          in: query
+          type: integer
+          description: Page number for paginated results
+        - name: pageSize
+          in: query
+          type: integer
+          description: Number of results per page
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: substance-abuse-and-mental-health-services-administration-rest
+    description: REST adapter for SAMHSA Behavioral Health Treatment Services Locator API.
+    resources:
+    - path: /listing
+      name: searchtreatmentfacilities
+      operations:
+      - method: GET
+        name: searchtreatmentfacilities
+        description: Search Treatment Facilities
+        call: substance-abuse-and-mental-health-services-administration.searchtreatmentfacilities
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: substance-abuse-and-mental-health-services-administration-mcp
+    transport: http
+    description: MCP adapter for SAMHSA Behavioral Health Treatment Services Locator API for AI agent use.
+    tools:
+    - name: searchtreatmentfacilities
+      description: Search Treatment Facilities
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: substance-abuse-and-mental-health-services-administration.searchtreatmentfacilities
+      with:
+        sAddr: tools.sAddr
+        sCity: tools.sCity
+        sState: tools.sState
+        sZip: tools.sZip
+        sDistance: tools.sDistance
+        sCatCode: tools.sCatCode
+        sType: tools.sType
+        sService: tools.sService
+        sMedicaid: tools.sMedicaid
+        sMedicare: tools.sMedicare
+        sSlidingFee: tools.sSlidingFee
+        sNoFee: tools.sNoFee
+        page: tools.page
+        pageSize: tools.pageSize
+      inputParameters:
+      - name: sAddr
+        type: string
+        description: Street address to search near
+      - name: sCity
+        type: string
+        description: City to search in
+      - name: sState
+        type: string
+        description: Two-letter state abbreviation (e.g., CA, TX)
+      - name: sZip
+        type: string
+        description: ZIP code to search near
+      - name: sDistance
+        type: integer
+        description: Search radius in miles
+      - name: sCatCode
+        type: string
+        description: 'Category code: SA (substance abuse), MH (mental health), CO (co-occurring)'
+      - name: sType
+        type: string
+        description: Facility type code
+      - name: sService
+        type: string
+        description: Service type code (e.g., detox, residential, outpatient)
+      - name: sMedicaid
+        type: string
+        description: Filter for Medicaid-accepting facilities
+      - name: sMedicare
+        type: string
+        description: Filter for Medicare-accepting facilities
+      - name: sSlidingFee
+        type: string
+        description: Filter for sliding-scale fee facilities
+      - name: sNoFee
+        type: string
+        description: Filter for no-cost treatment facilities
+      - name: page
+        type: integer
+        description: Page number for paginated results
+      - name: pageSize
+        type: integer
+        description: Number of results per page
+      outputParameters:
+      - type: object
+        mapping: $.
