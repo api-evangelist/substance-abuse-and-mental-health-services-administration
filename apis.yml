@@ -71,7 +71,7 @@ tags:
   - Mental Health
   - Open Data
   - Healthcare
-type: Contract
+kind: contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-12-03'
@@ -106,13 +106,13 @@ common:
   - url: https://www.samhsa.gov/data/terms-use
     type: Terms of Use
   - url: https://www.samhsa.gov/privacy
-    type: Privacy Policy
+    type: PrivacyPolicy
   - url: https://github.com/samhsa
-    type: GitHub Organization
+    type: GitHubOrganization
   - url: https://catalog.data.gov/dataset?organization=samhsa-hhs
     type: Data.gov Catalog
   - url: https://api.data.gov/docs/samhsa/
-    type: API Reference
+    type: APIReference
   - url: vocabulary/samhsa-vocabulary.yml
     type: Vocabulary
   - url: json-ld/samhsa-context.jsonld
