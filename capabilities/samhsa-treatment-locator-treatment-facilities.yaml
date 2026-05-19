@@ -1,24 +1,25 @@
 naftiko: 1.0.0-alpha2
 info:
-  label: SAMHSA Behavioral Health Treatment Services Locator API
-  description: The SAMHSA Behavioral Health Treatment Services Locator API provides search access to over 14,000 substance
-    use disorder and mental health treatment facilities across the United States. The API powers findtreatment.gov and allows
-    developers to build treatment locator tools for their communities.
+  label: SAMHSA Behavioral Health Treatment Services Locator API — Treatment Facilities
+  description: 'SAMHSA Behavioral Health Treatment Services Locator API — Treatment Facilities. 1 operations. Lead operation:
+    Search Treatment Facilities. Self-contained Naftiko capability covering one Substance Abuse And Mental Health Services
+    Administration business surface.'
   tags:
-  - Substance
-  - Abuse
-  - And
-  - Mental
-  - Health
-  - Services
-  created: '2026-05-06'
-  modified: '2026-05-06'
+  - Substance Abuse And Mental Health Services Administration
+  - Treatment Facilities
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SUBSTANCE_ABUSE_AND_MENTAL_HEALTH_SERVICES_ADMINISTRATION_API_KEY: SUBSTANCE_ABUSE_AND_MENTAL_HEALTH_SERVICES_ADMINISTRATION_API_KEY
 capability:
   consumes:
   - type: http
-    namespace: substance-abuse-and-mental-health-services-administration
+    namespace: samhsa-treatment-locator-treatment-facilities
     baseUri: https://findtreatment.gov/locator/listing
-    description: SAMHSA Behavioral Health Treatment Services Locator API HTTP API.
+    description: SAMHSA Behavioral Health Treatment Services Locator API — Treatment Facilities business capability. Self-contained,
+      no shared references.
     resources:
     - name: listing
       path: /listing
@@ -26,6 +27,11 @@ capability:
       - name: searchtreatmentfacilities
         method: GET
         description: Search Treatment Facilities
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
         inputParameters:
         - name: sAddr
           in: query
@@ -83,40 +89,53 @@ capability:
           in: query
           type: integer
           description: Number of results per page
-        outputRawFormat: json
-        outputParameters:
-        - name: result
-          type: object
-          value: $.
   exposes:
   - type: rest
+    namespace: samhsa-treatment-locator-treatment-facilities-rest
     port: 8080
-    namespace: substance-abuse-and-mental-health-services-administration-rest
-    description: REST adapter for SAMHSA Behavioral Health Treatment Services Locator API.
+    description: REST adapter for SAMHSA Behavioral Health Treatment Services Locator API — Treatment Facilities. One Spectral-compliant
+      resource per consumed operation, prefixed with /v1.
     resources:
-    - path: /listing
-      name: searchtreatmentfacilities
+    - path: /v1/listing
+      name: listing
+      description: REST surface for listing.
       operations:
       - method: GET
         name: searchtreatmentfacilities
         description: Search Treatment Facilities
-        call: substance-abuse-and-mental-health-services-administration.searchtreatmentfacilities
+        call: samhsa-treatment-locator-treatment-facilities.searchtreatmentfacilities
+        with:
+          sAddr: rest.sAddr
+          sCity: rest.sCity
+          sState: rest.sState
+          sZip: rest.sZip
+          sDistance: rest.sDistance
+          sCatCode: rest.sCatCode
+          sType: rest.sType
+          sService: rest.sService
+          sMedicaid: rest.sMedicaid
+          sMedicare: rest.sMedicare
+          sSlidingFee: rest.sSlidingFee
+          sNoFee: rest.sNoFee
+          page: rest.page
+          pageSize: rest.pageSize
         outputParameters:
         - type: object
           mapping: $.
   - type: mcp
+    namespace: samhsa-treatment-locator-treatment-facilities-mcp
     port: 9090
-    namespace: substance-abuse-and-mental-health-services-administration-mcp
     transport: http
-    description: MCP adapter for SAMHSA Behavioral Health Treatment Services Locator API for AI agent use.
+    description: MCP adapter for SAMHSA Behavioral Health Treatment Services Locator API — Treatment Facilities. One tool
+      per consumed operation, routed inline through this capability's consumes block.
     tools:
-    - name: searchtreatmentfacilities
+    - name: search-treatment-facilities
       description: Search Treatment Facilities
       hints:
         readOnly: true
         destructive: false
         idempotent: true
-      call: substance-abuse-and-mental-health-services-administration.searchtreatmentfacilities
+      call: samhsa-treatment-locator-treatment-facilities.searchtreatmentfacilities
       with:
         sAddr: tools.sAddr
         sCity: tools.sCity
@@ -132,49 +151,6 @@ capability:
         sNoFee: tools.sNoFee
         page: tools.page
         pageSize: tools.pageSize
-      inputParameters:
-      - name: sAddr
-        type: string
-        description: Street address to search near
-      - name: sCity
-        type: string
-        description: City to search in
-      - name: sState
-        type: string
-        description: Two-letter state abbreviation (e.g., CA, TX)
-      - name: sZip
-        type: string
-        description: ZIP code to search near
-      - name: sDistance
-        type: integer
-        description: Search radius in miles
-      - name: sCatCode
-        type: string
-        description: 'Category code: SA (substance abuse), MH (mental health), CO (co-occurring)'
-      - name: sType
-        type: string
-        description: Facility type code
-      - name: sService
-        type: string
-        description: Service type code (e.g., detox, residential, outpatient)
-      - name: sMedicaid
-        type: string
-        description: Filter for Medicaid-accepting facilities
-      - name: sMedicare
-        type: string
-        description: Filter for Medicare-accepting facilities
-      - name: sSlidingFee
-        type: string
-        description: Filter for sliding-scale fee facilities
-      - name: sNoFee
-        type: string
-        description: Filter for no-cost treatment facilities
-      - name: page
-        type: integer
-        description: Page number for paginated results
-      - name: pageSize
-        type: integer
-        description: Number of results per page
       outputParameters:
       - type: object
         mapping: $.
