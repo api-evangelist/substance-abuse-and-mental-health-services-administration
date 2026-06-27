@@ -99,7 +99,7 @@ common:
   - url: https://www.samhsa.gov/about-us/who-we-are/faq
     type: FAQ
   - url: https://www.samhsa.gov/data/terms-use
-    type: Terms of Use
+    type: TermsOfService
   - url: https://www.samhsa.gov/privacy
     type: PrivacyPolicy
   - url: https://github.com/samhsa
@@ -111,12 +111,12 @@ common:
   - url: vocabulary/samhsa-vocabulary.yml
     type: Vocabulary
   - url: json-ld/samhsa-context.jsonld
-    type: JSON-LD Context
+    type: JSONLDContext
   - url: json-schema/samhsa-treatment-facility-schema.json
-    type: JSON Schema
+    type: JSONSchema
   - url: json-schema/samhsa-nsduh-data-schema.json
-    type: JSON Schema
+    type: JSONSchema
   - url: json-structure/samhsa-treatment-facility-structure.json
-    type: JSON Structure
+    type: JSONStructure
   - url: examples/samhsa-search-treatment-facilities-example.json
-    type: Example
+    type: Examples
