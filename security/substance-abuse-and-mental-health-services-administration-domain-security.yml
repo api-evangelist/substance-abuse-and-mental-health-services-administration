@@ -1,0 +1,39 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.samhsa.gov
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Mar 12 13:51:16 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: findtreatment.gov
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 11 18:09:31 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: www.datafiles.samhsa.gov
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Nov 22 19:36:01 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: samhsa.gov
+  dnssec: true
+  caa:
+  - 0 issue "digicert.com"
+  - 0 issue "entrust.net"
+  - 0 issue "identrust.com"
+  - 0 issue "amazon.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: findtreatment.gov
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
