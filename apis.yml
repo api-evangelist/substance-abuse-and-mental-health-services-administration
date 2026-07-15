@@ -82,6 +82,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.19'
 common:
+  - type: AgenticAccess
+    url: agentic-access/substance-abuse-and-mental-health-services-administration-agentic-access.yml
   - type: DomainSecurity
     url: security/substance-abuse-and-mental-health-services-administration-domain-security.yml
   - type: LinkedIn
