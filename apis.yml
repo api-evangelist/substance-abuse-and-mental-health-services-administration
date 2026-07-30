@@ -2,60 +2,56 @@ aid: substance-abuse-and-mental-health-services-administration
 url: >-
   https://raw.githubusercontent.com/api-evangelist/substance-abuse-and-mental-health-services-administration/refs/heads/main/apis.yml
 apis:
-  - aid: substance-abuse-and-mental-health-services-administration:samhsa-treatment-locator-api
-    name: SAMHSA Behavioral Health Treatment Services Locator API
-    tags:
-      - Treatment Facilities
-      - Behavioral Health
-      - Substance Use Disorders
-      - Mental Health
-      - Open Data
-    humanURL: https://findtreatment.gov
-    properties:
-      - url: https://findtreatment.gov
-        type: Documentation
-      - url: https://www.samhsa.gov/find-help/national-helpline
-        type: National Helpline
-      - url: openapi/samhsa-treatment-locator-openapi.yml
-        type: OpenAPI
-    description: >-
-      The SAMHSA Treatment Services Locator API provides searchable access to over 14,000 behavioral health treatment
-      facilities across the United States. Search by location, service type, payment options (Medicaid, Medicare,
-      sliding fee, free treatment), and population served. Powers the findtreatment.gov website.
-  - aid: substance-abuse-and-mental-health-services-administration:samhsa-data-portal
-    name: SAMHSA Data Portal
-    tags:
-      - Open Data
-      - Survey Data
-      - NSDUH
-      - Statistics
-      - Public Health
-    humanURL: https://www.datafiles.samhsa.gov
-    properties:
-      - url: https://www.datafiles.samhsa.gov
-        type: Documentation
-      - url: https://www.samhsa.gov/data/
-        type: Data Portal
-      - url: https://pdas.samhsa.gov/sapt
-        type: State Data
-    description: >-
-      SAMHSA's data portal provides access to national and state-level behavioral health statistics including the
-      National Survey on Drug Use and Health (NSDUH), Treatment Episode Data Set (TEDS), and National Survey of
-      Substance Abuse Treatment Services (N-SSATS). Data available for download in SAS, SPSS, and Stata formats.
-  - aid: substance-abuse-and-mental-health-services-administration:samhsa-mental-health-atlas
-    name: SAMHSA Mental Health Client Level Data
-    tags:
-      - Mental Health
-      - Client Data
-      - Statistics
-      - Open Data
-    humanURL: https://www.samhsa.gov/data/report/2020-mental-health-client-level-data-cld
-    properties:
-      - url: https://www.samhsa.gov/data/report/2020-mental-health-client-level-data-cld
-        type: Documentation
-    description: >-
-      Client-Level Data (CLD) from state mental health agencies on clients receiving state-funded mental health
-      services. Provides data on demographics, diagnoses, services received, and outcomes.
+- aid: substance-abuse-and-mental-health-services-administration:samhsa-data-portal
+  name: SAMHSA Data Portal
+  tags:
+  - Open Data
+  - Survey Data
+  - NSDUH
+  - Statistics
+  - Public Health
+  humanURL: https://www.datafiles.samhsa.gov
+  properties:
+  - url: https://www.datafiles.samhsa.gov
+    type: Documentation
+  - url: https://www.samhsa.gov/data/
+    type: Data Portal
+  - url: https://pdas.samhsa.gov/sapt
+    type: State Data
+  description: >-
+    SAMHSA's data portal provides access to national and state-level behavioral health statistics including
+    the National Survey on Drug Use and Health (NSDUH), Treatment Episode Data Set (TEDS), and National
+    Survey of Substance Abuse Treatment Services (N-SSATS). Data available for download in SAS, SPSS,
+    and Stata formats.
+- aid: substance-abuse-and-mental-health-services-administration:samhsa-mental-health-atlas
+  name: SAMHSA Mental Health Client Level Data
+  tags:
+  - Mental Health
+  - Client Data
+  - Statistics
+  - Open Data
+  humanURL: https://www.samhsa.gov/data/report/2020-mental-health-client-level-data-cld
+  properties:
+  - url: https://www.samhsa.gov/data/report/2020-mental-health-client-level-data-cld
+    type: Documentation
+  description: >-
+    Client-Level Data (CLD) from state mental health agencies on clients receiving state-funded mental
+    health services. Provides data on demographics, diagnoses, services received, and outcomes.
+- aid: >-
+    substance-abuse-and-mental-health-services-administration:substance-abuse-and-mental-health-services-administration-treatment-facilities-api
+  name: Substance Abuse and Mental Health Services Administration Treatment Facilities API
+  description: Search and retrieve behavioral health treatment facility listings
+  humanURL: https://findtreatment.gov
+  tags:
+  - Treatment Facilities
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/substance-abuse-and-mental-health-services-administration-treatment-facilities-api-openapi.yml
+  - type: Documentation
+    url: https://findtreatment.gov
+  - type: National Helpline
+    url: https://www.samhsa.gov/find-help/national-helpline
 name: Substance Abuse and Mental Health Services Administration
 tags:
   - Federal Government
@@ -66,7 +62,19 @@ tags:
   - Open Data
   - Healthcare
 kind: contract
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/substance-abuse-and-mental-health-services-administration.png
 access: 3rd-Party
 created: '2024-12-03'
 modified: '2026-05-19'
