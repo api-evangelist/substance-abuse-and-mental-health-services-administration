@@ -1,0 +1,14 @@
+{
+  "provider": "substance-abuse-and-mental-health-services-administration",
+  "sources": [
+    "substance-abuse-and-mental-health-services-administration-treatment-facilities-api-openapi.yml"
+  ],
+  "outputs": [
+    "substance-abuse-and-mental-health-services-administration-treatment-facilities-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
