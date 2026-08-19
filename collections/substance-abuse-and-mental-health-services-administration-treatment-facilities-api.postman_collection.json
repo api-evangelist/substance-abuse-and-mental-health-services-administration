@@ -1,0 +1,416 @@
+{
+  "item": [
+    {
+      "id": "c4ed1747-0638-4b4f-b2a4-004a42e80c72",
+      "name": "Treatment Facilities",
+      "description": {
+        "content": "Search and retrieve behavioral health treatment facility listings",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0b1c7bd5-8c5e-4324-af5a-11fc69d54886",
+          "name": "Search Treatment Facilities",
+          "request": {
+            "name": "Search Treatment Facilities",
+            "description": {
+              "content": "Search for substance use disorder and mental health treatment facilities by location, service type, payment options, and other criteria. Returns paginated results with facility contact information and services.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "listing"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "sAddr",
+                  "value": "<string>",
+                  "description": "Street address to search near"
+                },
+                {
+                  "disabled": false,
+                  "key": "sCity",
+                  "value": "<string>",
+                  "description": "City to search in"
+                },
+                {
+                  "disabled": false,
+                  "key": "sState",
+                  "value": "<string>",
+                  "description": "Two-letter state abbreviation (e.g., CA, TX)"
+                },
+                {
+                  "disabled": false,
+                  "key": "sZip",
+                  "value": "<string>",
+                  "description": "ZIP code to search near"
+                },
+                {
+                  "disabled": false,
+                  "key": "sDistance",
+                  "value": "100",
+                  "description": "Search radius in miles"
+                },
+                {
+                  "disabled": false,
+                  "key": "sCatCode",
+                  "value": "<string>",
+                  "description": "Category code: SA (substance abuse), MH (mental health), CO (co-occurring)"
+                },
+                {
+                  "disabled": false,
+                  "key": "sType",
+                  "value": "<string>",
+                  "description": "Facility type code"
+                },
+                {
+                  "disabled": false,
+                  "key": "sService",
+                  "value": "<string>",
+                  "description": "Service type code (e.g., detox, residential, outpatient)"
+                },
+                {
+                  "disabled": false,
+                  "key": "sMedicaid",
+                  "value": "<string>",
+                  "description": "Filter for Medicaid-accepting facilities"
+                },
+                {
+                  "disabled": false,
+                  "key": "sMedicare",
+                  "value": "<string>",
+                  "description": "Filter for Medicare-accepting facilities"
+                },
+                {
+                  "disabled": false,
+                  "key": "sSlidingFee",
+                  "value": "<string>",
+                  "description": "Filter for sliding-scale fee facilities"
+                },
+                {
+                  "disabled": false,
+                  "key": "sNoFee",
+                  "value": "<string>",
+                  "description": "Filter for no-cost treatment facilities"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for paginated results"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "20",
+                  "description": "Number of results per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "81ea4e70-7c8f-407b-b5c0-3719f88a3166",
+              "name": "Treatment facility search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listing"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sCity",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sState",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sZip",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sDistance",
+                      "value": "100"
+                    },
+                    {
+                      "key": "sCatCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicaid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicare",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sSlidingFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sNoFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"facilities\": [\n    {\n      \"name1\": \"string\",\n      \"name2\": \"string\",\n      \"street1\": \"string\",\n      \"street2\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"zip\": \"string\",\n      \"phone\": \"string\",\n      \"websiteUrl\": \"http://wzCTTuwgapenlJyHWzOG.fkfwttv5VDdxKjZUMlSRZjFaVs,\",\n      \"latitude\": 7736.96411399216,\n      \"longitude\": 8909.911478141184,\n      \"distMiles\": 9473.266665746109,\n      \"category\": \"string\",\n      \"typeDescription\": \"string\",\n      \"services\": [\n        \"string\",\n        \"string\"\n      ],\n      \"paymentOptions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"medicaid\": \"Y\",\n      \"medicare\": \"N\",\n      \"slidingFee\": \"Y\",\n      \"noFee\": \"N\"\n    },\n    {\n      \"name1\": \"string\",\n      \"name2\": \"string\",\n      \"street1\": \"string\",\n      \"street2\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"zip\": \"string\",\n      \"phone\": \"string\",\n      \"websiteUrl\": \"https://LbmHiTZeQldvwqTobkMGdjSd.kyvqJzWzrbPA7DseRbonIEwEmZuLjb9ZNZ6-2QFM9ih9hWME146ShMS4yTraA-ajRSV1q3JHL\",\n      \"latitude\": 4452.817171676008,\n      \"longitude\": 330.50252297695647,\n      \"distMiles\": 4072.587058329985,\n      \"category\": \"string\",\n      \"typeDescription\": \"string\",\n      \"services\": [\n        \"string\",\n        \"string\"\n      ],\n      \"paymentOptions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"medicaid\": \"Y\",\n      \"medicare\": \"Y\",\n      \"slidingFee\": \"N\",\n      \"noFee\": \"N\"\n    }\n  ],\n  \"totalCount\": 5529,\n  \"page\": 9026,\n  \"pageSize\": 9641,\n  \"searchLocation\": {\n    \"latitude\": 9860.239291168242,\n    \"longitude\": 4739.631692918825,\n    \"address\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d3162aeb-e6b8-4807-8121-2265a338af23",
+              "name": "Bad request - invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listing"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sCity",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sState",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sZip",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sDistance",
+                      "value": "100"
+                    },
+                    {
+                      "key": "sCatCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicaid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicare",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sSlidingFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sNoFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6c914f0b-2fa6-4229-a4d9-6d3d138ad294",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "listing"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "sAddr",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sCity",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sState",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sZip",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sDistance",
+                      "value": "100"
+                    },
+                    {
+                      "key": "sCatCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicaid",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sMedicare",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sSlidingFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sNoFee",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "20"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://findtreatment.gov/locator/listing",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "29154247-de75-4676-87c3-60c09584187d",
+    "name": "SAMHSA Behavioral Health Treatment Services Locator Treatment Facilities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The SAMHSA Behavioral Health Treatment Services Locator API provides search access to over 14,000 substance use disorder and mental health treatment facilities across the United States. The API powers findtreatment.gov and allows developers to build treatment locator tools for their communities.\n\nContact Support:\n Name: SAMHSA",
+      "type": "text/plain"
+    }
+  }
+}
