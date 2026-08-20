@@ -54,6 +54,14 @@ apis:
     url: https://www.samhsa.gov/find-help/national-helpline
 name: Substance Abuse and Mental Health Services Administration
 tags:
+  - Federal-Government
+  - Public Health
+  - Behavioral Health
+  - Substance Use Disorders
+  - Mental Health
+  - Open Data
+  - Healthcare
+tags_raw:
   - Federal Government
   - Public Health
   - Behavioral Health
