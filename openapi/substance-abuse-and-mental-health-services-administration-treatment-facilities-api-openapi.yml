@@ -138,6 +138,31 @@ paths:
           description: Internal server error
 components:
   schemas:
+    TreatmentFacilitySearchResponse:
+      type: object
+      properties:
+        facilities:
+          type: array
+          items:
+            $ref: '#/components/schemas/TreatmentFacility'
+        totalCount:
+          type: integer
+          description: Total number of matching facilities
+        page:
+          type: integer
+          description: Current page number
+        pageSize:
+          type: integer
+          description: Results per page
+        searchLocation:
+          type: object
+          properties:
+            latitude:
+              type: number
+            longitude:
+              type: number
+            address:
+              type: string
     TreatmentFacility:
       type: object
       description: A behavioral health treatment facility
@@ -219,28 +244,3 @@ components:
           - Y
           - N
           description: Whether facility offers free treatment
-    TreatmentFacilitySearchResponse:
-      type: object
-      properties:
-        facilities:
-          type: array
-          items:
-            $ref: '#/components/schemas/TreatmentFacility'
-        totalCount:
-          type: integer
-          description: Total number of matching facilities
-        page:
-          type: integer
-          description: Current page number
-        pageSize:
-          type: integer
-          description: Results per page
-        searchLocation:
-          type: object
-          properties:
-            latitude:
-              type: number
-            longitude:
-              type: number
-            address:
-              type: string
