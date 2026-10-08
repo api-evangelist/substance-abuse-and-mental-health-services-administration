@@ -111,6 +111,12 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.23'
 common:
+  - type: Plans
+    url: plans/substance-abuse-and-mental-health-services-administration-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/substance-abuse-and-mental-health-services-administration-rate-limits.yml
+  - type: FinOps
+    url: finops/substance-abuse-and-mental-health-services-administration-finops.yml
   - url: https://www.samhsa.gov/blog
     type: Blog
   - type: AgenticAccess
