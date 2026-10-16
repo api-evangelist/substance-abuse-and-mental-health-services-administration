@@ -1,0 +1,14 @@
+{
+  "repo": "substance-abuse-and-mental-health-services-administration",
+  "feeds": [
+    {
+      "source": "https://www.samhsa.gov/blog",
+      "feed_url": "https://www.samhsa.gov/blog/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}
